@@ -1,0 +1,984 @@
+{
+  "certusVersion": "2.2.0",
+  "generatedAt": "2026-03-23T06:28:26.801Z",
+  "repository": "Tarun-Mittal-cell/TheHoTTGame",
+  "headSha": "7729d852412c3b9159cc7ef9f03a887a55291d37",
+  "prNumber": 25,
+  "durationMs": 364,
+  "grade": "F",
+  "score": 49,
+  "summary": {
+    "totalFindings": 3,
+    "critical": 1,
+    "high": 1,
+    "medium": 1,
+    "low": 0,
+    "coveragePercent": -1,
+    "controlsPassed": 20,
+    "controlsFailed": 5,
+    "controlsPartial": 4,
+    "controlsTotal": 29,
+    "blueprintsPassed": 8,
+    "blueprintsTotal": 18
+  },
+  "scanners": {
+    "test": {
+      "scanner": "test-runner",
+      "timestamp": "2026-03-23T06:28:26.771Z",
+      "status": "failed",
+      "summary": "No test files found | Coverage: not configured | 3 finding(s)",
+      "findings": [
+        {
+          "id": "test-no-framework",
+          "severity": "high",
+          "title": "No test framework detected",
+          "description": "No test framework was found in package.json dependencies, test scripts, or configuration files. Automated testing is essential for maintaining code quality and preventing regressions.",
+          "remediation": "Install a test framework such as Jest, Vitest, or Mocha and configure it in your project."
+        },
+        {
+          "id": "test-no-files",
+          "severity": "critical",
+          "title": "No test files found",
+          "description": "No test files were found in the repository. Looked for files matching patterns: *.test.ts, *.test.js, *.spec.ts, *.spec.js, *.test.tsx, *.test.jsx, *_test.go, test_*.py, *_test.py and checked __tests__/, tests/, test/, spec/ directories.",
+          "remediation": "Create test files for your source code following standard naming conventions (e.g., component.test.ts)."
+        },
+        {
+          "id": "test-no-coverage",
+          "severity": "medium",
+          "title": "No code coverage report found",
+          "description": "No coverage report was found. Checked for coverage-summary.json (Istanbul/NYC), lcov.info, cobertura.xml, and clover.xml in standard locations.",
+          "remediation": "Configure your test runner to generate coverage reports. For Jest: add --coverage flag. For Vitest: add coverage in config. Ensure reports are generated in the coverage/ directory."
+        }
+      ],
+      "metadata": {
+        "testFramework": "none",
+        "testFrameworks": [],
+        "totalTestFiles": 0,
+        "totalTestCases": 0,
+        "totalAssertions": 0,
+        "coveragePercent": -1,
+        "branchCoverage": -1,
+        "coverageConfigured": false,
+        "coverageSource": null,
+        "functionCoverage": -1,
+        "statementCoverage": -1,
+        "testCategories": {
+          "unit": 0,
+          "integration": 0,
+          "e2e": 0
+        },
+        "hasMocking": false,
+        "testResults": null,
+        "untestedLargeFiles": 0,
+        "emptyTestDirectories": [],
+        "repoRoot": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+        "durationMs": 2,
+        "headSha": "7729d852412c3b9159cc7ef9f03a887a55291d37"
+      },
+      "findingCount": 3
+    },
+    "sast": {
+      "scanner": "sast-semgrep",
+      "timestamp": "2026-03-23T06:28:26.772Z",
+      "status": "passed",
+      "summary": "No security issues found. Scanned 0 files across 11 rules.",
+      "findings": [],
+      "metadata": {
+        "engine": "certus-sast",
+        "engineVersion": "2.0.0",
+        "rulesLoaded": 11,
+        "rulesMatched": 0,
+        "filesScanned": 0,
+        "filesWithFindings": 0,
+        "scanDurationMs": 1,
+        "repoRoot": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+        "headSha": "7729d852412c3b9159cc7ef9f03a887a55291d37",
+        "scanHash": "e3b0c44298fc1c14",
+        "severityCounts": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0,
+          "info": 0
+        }
+      },
+      "findingCount": 0
+    },
+    "sbom": {
+      "scanner": "sbom-cyclonedx",
+      "timestamp": "2026-03-23T06:28:26.772Z",
+      "status": "passed",
+      "summary": "No lockfiles found — no dependencies to analyze.",
+      "findings": [],
+      "metadata": {
+        "totalDependencies": 0,
+        "directDependencies": 0,
+        "vulnerableDependencies": 0,
+        "licensesChecked": 0,
+        "copyleftCount": 0,
+        "ecosystem": "none",
+        "sbomFormat": "CycloneDX 1.5"
+      },
+      "findingCount": 0
+    },
+    "iac": {
+      "scanner": "iac-policy",
+      "timestamp": "2026-03-23T06:28:26.773Z",
+      "status": "passed",
+      "summary": "No IaC security issues found. Scanned 1 files (0 IaC files) across 20 rules.",
+      "findings": [],
+      "metadata": {
+        "engine": "certus-iac",
+        "engineVersion": "1.0.0",
+        "filesScanned": 1,
+        "iacFilesFound": 0,
+        "iacTypes": {
+          "terraform": 0,
+          "docker": 0,
+          "kubernetes": 0,
+          "cloudformation": 0
+        },
+        "rulesChecked": 20,
+        "scanDurationMs": 1,
+        "repoRoot": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+        "headSha": "7729d852412c3b9159cc7ef9f03a887a55291d37",
+        "scanHash": "e3b0c44298fc1c14",
+        "severityCounts": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0,
+          "info": 0
+        }
+      },
+      "findingCount": 0
+    },
+    "secrets": {
+      "scanner": "secrets-detector",
+      "timestamp": "2026-03-23T06:28:26.784Z",
+      "status": "passed",
+      "summary": "No secrets detected. Scanned 37 files across 25 secret patterns.",
+      "findings": [],
+      "metadata": {
+        "engine": "certus-secrets",
+        "engineVersion": "1.0.0",
+        "filesScanned": 37,
+        "secretsFound": 0,
+        "patternCategories": {},
+        "highEntropyStrings": 0,
+        "patternsChecked": 25,
+        "scanDurationMs": 11,
+        "repoRoot": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+        "headSha": "7729d852412c3b9159cc7ef9f03a887a55291d37",
+        "scanHash": "e3b0c44298fc1c14",
+        "severityCounts": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0,
+          "info": 0
+        }
+      },
+      "findingCount": 0
+    }
+  },
+  "controlMappings": [
+    {
+      "framework": "SOC-2",
+      "controlId": "CC-2.1",
+      "title": "Communication and Information — COSO Principle 13",
+      "status": "failed",
+      "evidence": [
+        "No coverage data available",
+        "0 test files found",
+        "HIGH: No test framework detected",
+        "CRITICAL: No test files found",
+        "MEDIUM: No code coverage report found"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "SOC-2",
+      "controlId": "CC-3.2",
+      "title": "Risk Assessment — COSO Principle 7",
+      "status": "passed",
+      "evidence": [
+        "SAST analysis completed with no critical or high findings",
+        "0 files scanned with 0 security patterns",
+        "No security issues found. Scanned 0 files across 11 rules."
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "SOC-2",
+      "controlId": "CC-6.1",
+      "title": "Logical and Physical Access Controls",
+      "status": "passed",
+      "evidence": [
+        "No hardcoded secrets or access control issues detected",
+        "Static analysis verified credential handling"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "SOC-2",
+      "controlId": "CC-6.6",
+      "title": "Security Measures Against Threats Outside System Boundaries",
+      "status": "passed",
+      "evidence": [
+        "No input validation or boundary protection issues found",
+        "Injection, XSS, and SSRF checks passed"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "SOC-2",
+      "controlId": "CC-7.2",
+      "title": "System Monitoring",
+      "status": "passed",
+      "evidence": [
+        "Dependency vulnerability scan completed — no known CVEs",
+        "0 dependencies monitored"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "SOC-2",
+      "controlId": "CC-8.1",
+      "title": "Change Management",
+      "status": "failed",
+      "evidence": [
+        "No automated tests detected",
+        "No test framework detected",
+        "No test files found",
+        "No code coverage report found"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "HIPAA",
+      "controlId": "164.312(a)",
+      "title": "Access Control",
+      "status": "passed",
+      "evidence": [
+        "No access control vulnerabilities detected in static analysis",
+        "Authentication and authorization patterns verified"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "HIPAA",
+      "controlId": "164.312(b)",
+      "title": "Audit Controls",
+      "status": "partial",
+      "evidence": [
+        "Automated test suite executed: 0 test cases",
+        "Test results recorded at 2026-03-23T06:28:26.771Z",
+        "Coverage not configured"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "HIPAA",
+      "controlId": "164.312(c)",
+      "title": "Integrity",
+      "status": "passed",
+      "evidence": [
+        "No data integrity vulnerabilities detected",
+        "Input validation and output encoding verified via SAST"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "HIPAA",
+      "controlId": "164.312(d)",
+      "title": "Person or Entity Authentication",
+      "status": "passed",
+      "evidence": [
+        "Cryptographic implementations verified — no weak algorithms detected",
+        "Authentication mechanisms passed static analysis"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "HIPAA",
+      "controlId": "164.312(e)",
+      "title": "Transmission Security",
+      "status": "passed",
+      "evidence": [
+        "No transmission security vulnerabilities in dependencies",
+        "SBOM dependency analysis completed"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "HIPAA",
+      "controlId": "164.308(a)(1)",
+      "title": "Security Management Process — Risk Analysis",
+      "status": "passed",
+      "evidence": [
+        "Risk analysis completed: 0 source files scanned",
+        "0 security risk patterns evaluated",
+        "No security risks identified in codebase"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "PCI-DSS",
+      "controlId": "Req-6.2",
+      "title": "Protect Systems Against Known Vulnerabilities (Patches)",
+      "status": "passed",
+      "evidence": [
+        "All dependencies are up to date with no known CVEs",
+        "Scanned 0 dependencies via OSV database"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "PCI-DSS",
+      "controlId": "Req-6.3",
+      "title": "Develop Secure Software Applications",
+      "status": "partial",
+      "evidence": [
+        "No coverage data",
+        "0 test cases found",
+        "No test framework detected",
+        "No test files found",
+        "No code coverage report found"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "PCI-DSS",
+      "controlId": "Req-6.5",
+      "title": "Address Common Coding Vulnerabilities",
+      "status": "passed",
+      "evidence": [
+        "SAST scan found no common coding vulnerabilities",
+        "0 security patterns evaluated across 0 files"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "PCI-DSS",
+      "controlId": "Req-6.6",
+      "title": "Web Application Security",
+      "status": "passed",
+      "evidence": [
+        "No web application vulnerabilities detected",
+        "XSS, injection, SSRF, and path traversal checks passed"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "PCI-DSS",
+      "controlId": "Req-11.2",
+      "title": "Vulnerability Scans",
+      "status": "passed",
+      "evidence": [
+        "Vulnerability scan passed",
+        "0 dependencies scanned against OSV vulnerability database",
+        "No known CVEs detected"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "ISO-27001",
+      "controlId": "A.8.1",
+      "title": "Asset Management — Inventory of Assets",
+      "status": "partial",
+      "evidence": [
+        "No dependencies detected — SBOM is empty",
+        "Verify lockfile exists in repository"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "ISO-27001",
+      "controlId": "A.8.9",
+      "title": "Configuration Management",
+      "status": "passed",
+      "evidence": [
+        "No hardcoded configuration secrets detected",
+        "Configuration management practices verified via static analysis"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "ISO-27001",
+      "controlId": "A.12.6",
+      "title": "Technical Vulnerability Management",
+      "status": "passed",
+      "evidence": [
+        "Technical vulnerability scan completed — no significant issues found",
+        "All dependencies checked against OSV vulnerability database"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "ISO-27001",
+      "controlId": "A.14.2",
+      "title": "Security in Development and Support Processes",
+      "status": "failed",
+      "evidence": [
+        "0 test cases in 0 test files",
+        "No coverage report found",
+        "No test framework detected",
+        "No test files found",
+        "No code coverage report found"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "NIST-800-53",
+      "controlId": "SA-11",
+      "title": "Developer Testing and Evaluation",
+      "status": "failed",
+      "evidence": [
+        "No coverage data",
+        "0 test cases in 0 files",
+        "No test framework detected",
+        "No test files found",
+        "No code coverage report found"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "NIST-800-53",
+      "controlId": "RA-5",
+      "title": "Vulnerability Monitoring and Scanning",
+      "status": "passed",
+      "evidence": [
+        "Vulnerability scan (SAST) completed — no findings",
+        "Files scanned: 0",
+        "Security patterns evaluated: 0"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "NIST-800-53",
+      "controlId": "SI-2",
+      "title": "Flaw Remediation",
+      "status": "passed",
+      "evidence": [
+        "No known flaws in software dependencies",
+        "All components verified against OSV vulnerability database"
+      ],
+      "scanner": "sbom"
+    },
+    {
+      "framework": "NIST-800-53",
+      "controlId": "SA-15",
+      "title": "Development Process, Standards, and Tools",
+      "status": "failed",
+      "evidence": [
+        "No automated tests detected",
+        "Development process lacks automated quality gates"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "GDPR",
+      "controlId": "Art.25",
+      "title": "Data Protection by Design and by Default",
+      "status": "passed",
+      "evidence": [
+        "Data protection by design validated — no injection or data exposure risks",
+        "SAST analysis confirms proper input validation and data handling"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "GDPR",
+      "controlId": "Art.32",
+      "title": "Security of Processing",
+      "status": "partial",
+      "evidence": [
+        "0 test cases found",
+        "No coverage data",
+        "No test framework detected",
+        "No test files found",
+        "No code coverage report found"
+      ],
+      "scanner": "test-runner"
+    },
+    {
+      "framework": "GDPR",
+      "controlId": "Art.5",
+      "title": "Principles — Integrity and Confidentiality",
+      "status": "passed",
+      "evidence": [
+        "Data integrity and confidentiality verified via static analysis",
+        "No critical or high severity findings in codebase"
+      ],
+      "scanner": "sast"
+    },
+    {
+      "framework": "GDPR",
+      "controlId": "Art.35",
+      "title": "Data Protection Impact Assessment",
+      "status": "passed",
+      "evidence": [
+        "DPIA: 0 dependencies assessed for data protection impact",
+        "No vulnerable or copyleft-licensed dependencies found",
+        "Ecosystem: none"
+      ],
+      "scanner": "sbom"
+    }
+  ],
+  "blueprints": [
+    {
+      "slug": "security-headers",
+      "status": "failed",
+      "findingCount": 6,
+      "findings": [
+        {
+          "id": "sec-hdr-1-7729d852",
+          "severity": "high",
+          "title": "Missing Content-Security-Policy header",
+          "description": "No Content-Security-Policy (CSP) header configuration was found in any source file or framework config. Without CSP the application is vulnerable to cross-site scripting (XSS) and data injection attacks.",
+          "location": "Server configuration",
+          "remediation": "Configure a Content-Security-Policy header on your server. Example: `res.setHeader('Content-Security-Policy', \"default-src 'self'\")`",
+          "framework": "SOC-2",
+          "controlId": "CC-6.1"
+        },
+        {
+          "id": "sec-hdr-2-7729d852",
+          "severity": "high",
+          "title": "Missing Strict-Transport-Security header",
+          "description": "The Strict-Transport-Security (HSTS) header is not configured anywhere in the codebase. Without HSTS, browsers may allow insecure HTTP connections, exposing traffic to man-in-the-middle attacks.",
+          "location": "Server configuration",
+          "remediation": "Set the HSTS header with a minimum max-age of 31536000 (1 year) and include subdomains: `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`",
+          "framework": "PCI-DSS",
+          "controlId": "6.5"
+        },
+        {
+          "id": "sec-hdr-3-7729d852",
+          "severity": "medium",
+          "title": "Missing X-Frame-Options header",
+          "description": "The X-Frame-Options header is not set. The application pages can be embedded in iframes on other domains, enabling clickjacking attacks.",
+          "location": "Server configuration",
+          "remediation": "Add `X-Frame-Options: DENY` or `X-Frame-Options: SAMEORIGIN` to prevent framing by untrusted origins. Alternatively use CSP `frame-ancestors 'self'`.",
+          "framework": "NIST-800-53",
+          "controlId": "SC-8"
+        },
+        {
+          "id": "sec-hdr-4-7729d852",
+          "severity": "medium",
+          "title": "Missing X-Content-Type-Options header",
+          "description": "The X-Content-Type-Options header is not configured. Browsers may MIME-sniff responses, potentially executing malicious content as a different content type.",
+          "location": "Server configuration",
+          "remediation": "Set `X-Content-Type-Options: nosniff` to prevent browsers from MIME type sniffing.",
+          "framework": "SOC-2",
+          "controlId": "CC-6.1"
+        },
+        {
+          "id": "sec-hdr-5-7729d852",
+          "severity": "low",
+          "title": "Missing Referrer-Policy header",
+          "description": "No Referrer-Policy header is set. The browser may leak the full URL in the Referer header when navigating to external sites, potentially disclosing sensitive path or query parameters.",
+          "location": "Server configuration",
+          "remediation": "Add `Referrer-Policy: strict-origin-when-cross-origin` to limit referrer information shared with third parties.",
+          "framework": "PCI-DSS",
+          "controlId": "6.5"
+        },
+        {
+          "id": "sec-hdr-6-7729d852",
+          "severity": "low",
+          "title": "Missing Permissions-Policy header",
+          "description": "The Permissions-Policy (formerly Feature-Policy) header is not present. Browser features like camera, microphone, geolocation, and payment are not explicitly restricted.",
+          "location": "Server configuration",
+          "remediation": "Add a Permissions-Policy header to disable unused browser features: `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`",
+          "framework": "NIST-800-53",
+          "controlId": "SC-8"
+        }
+      ],
+      "summary": "Found 6 security header issues across 10 checks (scanned 0 files)."
+    },
+    {
+      "slug": "auth-hardening",
+      "status": "warning",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "auth-hdn-1-7729d852",
+          "severity": "medium",
+          "title": "No rate limiting detected",
+          "description": "No rate limiting library was found in dependencies and no rate limiting code patterns were detected in source files. Without rate limiting, the application is vulnerable to brute-force attacks and denial of service.",
+          "location": "package.json -> dependencies",
+          "remediation": "Add rate limiting to authentication endpoints and API routes. Install `express-rate-limit` or `rate-limiter-flexible` and apply it to login, registration, and password reset endpoints.",
+          "framework": "SOC-2",
+          "controlId": "CC-6.1"
+        },
+        {
+          "id": "auth-hdn-2-7729d852",
+          "severity": "low",
+          "title": "No multi-factor authentication (MFA) support detected",
+          "description": "No MFA libraries (speakeasy, otplib, WebAuthn) or MFA-related code patterns (TOTP, 2FA, authenticator) were found. MFA significantly reduces the risk of account compromise from stolen credentials.",
+          "location": "package.json / Authentication flow",
+          "remediation": "Implement TOTP-based 2FA using `otplib` or `speakeasy`, or WebAuthn using `@simplewebauthn/server`. At minimum, support MFA for privileged accounts.",
+          "framework": "HIPAA",
+          "controlId": "164.312(d)"
+        }
+      ],
+      "summary": "Found 2 authentication security issues across 8 checks (scanned 0 files)."
+    },
+    {
+      "slug": "audit-logging",
+      "status": "failed",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "aud-log-1-7729d852",
+          "severity": "high",
+          "title": "No structured logging library detected",
+          "description": "No logging library (winston, pino, bunyan, log4js) was found in project dependencies. The application likely relies on bare `console.log` calls which lack structure, levels, and context required for compliance audit trails.",
+          "location": "package.json -> dependencies",
+          "remediation": "Install a structured logging library: `npm install pino` (fastest) or `npm install winston` (most popular). Configure JSON output format with timestamps and log levels.",
+          "framework": "SOC-2",
+          "controlId": "CC-7.2"
+        },
+        {
+          "id": "aud-log-2-7729d852",
+          "severity": "high",
+          "title": "No HTTP request logging middleware detected",
+          "description": "No request logging middleware (morgan, pino-http, express-winston) or custom request logging patterns were found. HTTP request logs are essential for security monitoring, incident response, and compliance auditing.",
+          "location": "Server middleware configuration",
+          "remediation": "Add HTTP request logging middleware. For Express: `npm install morgan` and `app.use(morgan(\"combined\"))`. For structured logs: `npm install pino-http` and `app.use(pinoHttp())`. Ensure logs include method, path, status, duration, and client IP.",
+          "framework": "PCI-DSS",
+          "controlId": "10.2"
+        },
+        {
+          "id": "aud-log-3-7729d852",
+          "severity": "medium",
+          "title": "No error logging patterns detected",
+          "description": "No error logging calls (logger.error, console.error, error handler middleware, Sentry) were found in the codebase. Unlogged errors make it impossible to detect attacks, debug issues, or satisfy compliance requirements.",
+          "location": "Application-wide",
+          "remediation": "Add error logging to all catch blocks and implement a global error handler middleware. Use `logger.error()` with the full error object and request context. Consider integrating an error tracking service like Sentry.",
+          "framework": "SOC-2",
+          "controlId": "CC-7.2"
+        },
+        {
+          "id": "aud-log-4-7729d852",
+          "severity": "high",
+          "title": "No audit trail implementation detected",
+          "description": "No audit logging patterns (auditLog, audit_trail, auditEntry, activityLog) were found in the codebase. An audit trail that records who did what and when is required by SOC-2, HIPAA, PCI-DSS, and ISO-27001 for accountability and incident forensics.",
+          "location": "Application-wide",
+          "remediation": "Implement an audit logging module that records: actor (user ID), action (create/read/update/delete), resource type, resource ID, timestamp, and IP address. Store audit entries in a dedicated database table or external audit service.",
+          "framework": "HIPAA",
+          "controlId": "164.312(b)"
+        }
+      ],
+      "summary": "Found 4 audit logging issues across 9 checks (scanned 0 files)."
+    },
+    {
+      "slug": "dependency-hygiene",
+      "status": "failed",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "dep-hyg-1-7729d852",
+          "severity": "high",
+          "title": "No lockfile found in repository",
+          "description": "No package-lock.json, yarn.lock, or pnpm-lock.yaml was found. Without a lockfile, dependency versions are non-deterministic across installs, enabling supply-chain drift.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Run `npm install` (or the equivalent for your package manager) to generate a lockfile and commit it to the repository.",
+          "framework": "SOC-2",
+          "controlId": "CC-8.1"
+        }
+      ],
+      "summary": "Found 1 dependency hygiene issue across 0 production and 0 dev dependencies."
+    },
+    {
+      "slug": "secrets-rotation",
+      "status": "warning",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "sec-rot-1-7729d852",
+          "severity": "medium",
+          "title": ".gitignore missing entries for sensitive files",
+          "description": "The .gitignore file does not include patterns for: .env, *.pem, *.key, credentials.json. Without these entries, sensitive files could accidentally be committed to the repository.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442/.gitignore",
+          "remediation": "Add the following entries to .gitignore: .env, *.pem, *.key, credentials.json. Review existing git history for any previously committed sensitive files.",
+          "framework": "SOC-2",
+          "controlId": "CC-6.1"
+        }
+      ],
+      "summary": "Detected 1 potential secret or credential exposure across 39 scanned files."
+    },
+    {
+      "slug": "pii-redaction",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "No unprotected PII patterns detected. Scanned 39 files across 10 PII categories."
+    },
+    {
+      "slug": "runtime-shielding",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "All 7 runtime shielding checks passed. Scanned 0 Dockerfiles and 0 K8s manifests."
+    },
+    {
+      "slug": "control-map",
+      "status": "failed",
+      "findingCount": 7,
+      "findings": [
+        {
+          "id": "ctrl-map-1-7729d852",
+          "severity": "medium",
+          "title": "No compliance configuration file found",
+          "description": "No compliance configuration file (.certus.yml, .compliance.yml, compliance.json) was found in the repository. A compliance configuration defines which controls are active, maps them to frameworks, and documents exceptions.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Create a .certus.yml or .compliance.yml file in the repository root that defines enabled compliance controls, framework mappings, and any accepted risk exceptions.",
+          "framework": "SOC-2",
+          "controlId": "CC-1.1"
+        },
+        {
+          "id": "ctrl-map-2-7729d852",
+          "severity": "high",
+          "title": "No security or compliance policy documentation found",
+          "description": "No security policy documents (SECURITY.md, COMPLIANCE.md) were found in the repository. Policy documentation is a foundational requirement for SOC-2, ISO-27001, and most compliance frameworks.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Create a SECURITY.md file documenting your security vulnerability disclosure policy. Add COMPLIANCE.md describing applicable frameworks, controls, and your compliance posture. Consider placing detailed policies in a docs/security/ directory.",
+          "framework": "ISO-27001",
+          "controlId": "A.5.1.1"
+        },
+        {
+          "id": "ctrl-map-3-7729d852",
+          "severity": "medium",
+          "title": "No CODEOWNERS file found",
+          "description": "No CODEOWNERS file was found in the repository (checked root, .github/, and docs/). CODEOWNERS enforces mandatory code review by designated owners for specific paths, ensuring changes to critical code are reviewed by qualified personnel.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Create a CODEOWNERS file in .github/ or the repository root. Define owners for security-critical paths: `* @security-team`, `/src/auth/ @auth-team`, `/infrastructure/ @devops-team`.",
+          "framework": "SOC-2",
+          "controlId": "CC-8.1"
+        },
+        {
+          "id": "ctrl-map-4-7729d852",
+          "severity": "low",
+          "title": "No pull request template found",
+          "description": "No pull request template was found in .github/pull_request_template.md. PR templates standardize the change management process by prompting developers to document changes, testing, and risk assessment.",
+          "location": ".github/pull_request_template.md",
+          "remediation": "Create .github/pull_request_template.md with sections for: description, type of change, testing performed, security considerations, and compliance impact.",
+          "framework": "SOC-2",
+          "controlId": "CC-8.1"
+        },
+        {
+          "id": "ctrl-map-5-7729d852",
+          "severity": "medium",
+          "title": "No branch protection configuration evidence found",
+          "description": "No branch protection rules, required status checks, or review requirements were found in repository configuration files. Branch protection is essential for enforcing change management controls, requiring code review before merge.",
+          "location": "Repository settings",
+          "remediation": "Enable branch protection on the main branch via GitHub Settings > Branches. Require at least 1 approving review, require status checks to pass, enforce for administrators. Consider managing branch protection as code with Terraform github_branch_protection resource.",
+          "framework": "SOC-2",
+          "controlId": "CC-8.1"
+        },
+        {
+          "id": "ctrl-map-6-7729d852",
+          "severity": "high",
+          "title": "No CI/CD pipeline configuration found",
+          "description": "No CI/CD configuration files (.github/workflows, .gitlab-ci.yml, Jenkinsfile) were found. Without a CI pipeline, there are no automated quality or security gates in the development process.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Set up a CI pipeline using GitHub Actions, GitLab CI, or your preferred CI system. Include at minimum: linting, testing, security scanning, and build verification.",
+          "framework": "SOC-2",
+          "controlId": "CC-8.1"
+        },
+        {
+          "id": "ctrl-map-7-7729d852",
+          "severity": "low",
+          "title": "No CONTRIBUTING.md file found",
+          "description": "No contributing guidelines document was found. CONTRIBUTING.md defines the development workflow, coding standards, and review process, which are important for consistent change management.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Create a CONTRIBUTING.md documenting: development setup, branching strategy, commit conventions, testing requirements, and code review process.",
+          "framework": "ISO-27001",
+          "controlId": "A.14.2.1"
+        }
+      ],
+      "summary": "Found 7 governance issues across 6 checks."
+    },
+    {
+      "slug": "cloud-posture",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "All 9 cloud posture checks passed. Analyzed 0 Terraform and 0 CloudFormation/CDK files."
+    },
+    {
+      "slug": "input-validation",
+      "status": "failed",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "inp-val-1-7729d852",
+          "severity": "high",
+          "title": "No input validation library detected",
+          "description": "No input validation library (zod, joi, yup, class-validator, ajv, io-ts) was found in dependencies, and no schema validation patterns were detected in source code. Without systematic input validation, the application is vulnerable to injection attacks, type confusion, and data corruption.",
+          "location": "package.json -> dependencies",
+          "remediation": "Install a validation library: `npm install zod` (recommended for TypeScript). Define schemas for all API inputs, form submissions, and external data. Validate at the boundary where data enters the application.",
+          "framework": "OWASP",
+          "controlId": "A03:2021"
+        }
+      ],
+      "summary": "Found 1 input validation issue across 7 checks (scanned 0 files)."
+    },
+    {
+      "slug": "error-handling",
+      "status": "warning",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "err-hnd-1-7729d852",
+          "severity": "medium",
+          "title": "No error logging detected in codebase",
+          "description": "No error logging calls (logger.error, Sentry.captureException, console.error) were found. Without error logging, runtime failures go undetected, making incident response and debugging impossible.",
+          "location": "Application-wide",
+          "remediation": "Implement error logging in all catch blocks and error handlers. Use a structured logger (pino, winston) with `.error()` level. Consider integrating an error tracking service (Sentry, Bugsnag) for alerting and triage.",
+          "framework": "SOC-2",
+          "controlId": "CC-7.2"
+        },
+        {
+          "id": "err-hnd-2-7729d852",
+          "severity": "medium",
+          "title": "No unhandled promise rejection handler detected",
+          "description": "No `process.on(\"unhandledRejection\")` or `process.on(\"uncaughtException\")` handler was found. In Node.js, unhandled promise rejections can crash the process (default behavior in Node 15+), causing service outages without proper error logging.",
+          "location": "Application entry point",
+          "remediation": "Add global handlers: `process.on('unhandledRejection', (reason, promise) => { logger.error({ reason, promise }, 'Unhandled rejection'); })` and `process.on('uncaughtException', (err) => { logger.fatal(err); process.exit(1); })`. These are safety nets; always handle promises properly.",
+          "framework": "SOC-2",
+          "controlId": "CC-7.2"
+        }
+      ],
+      "summary": "Found 2 error handling issues across 7 checks (scanned 0 files)."
+    },
+    {
+      "slug": "data-encryption",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "All 7 data encryption checks passed. Scanned 0 source files."
+    },
+    {
+      "slug": "access-control",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "All 7 access control checks passed. Scanned 0 source files."
+    },
+    {
+      "slug": "api-security",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "All 7 API security checks passed. Scanned 0 source files."
+    },
+    {
+      "slug": "container-security",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "No Dockerfiles found in the repository. Container security checks not applicable."
+    },
+    {
+      "slug": "ci-cd-security",
+      "status": "failed",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "ci-cd-1-7729d852",
+          "severity": "high",
+          "title": "No CI/CD pipeline configuration found",
+          "description": "No CI/CD configuration files were found (.github/workflows, .gitlab-ci.yml, Jenkinsfile, .circleci/config.yml, .drone.yml). Without a CI pipeline, there are no automated build, test, or security scanning gates in the development process.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Set up a CI/CD pipeline. For GitHub: create .github/workflows/ci.yml. Include steps for: build verification, unit tests, linting, security scanning, and deployment gates.",
+          "framework": "SOC-2",
+          "controlId": "CC-8.1"
+        }
+      ],
+      "summary": "No CI/CD configuration found. Pipeline security checks cannot be performed."
+    },
+    {
+      "slug": "network-security",
+      "status": "passed",
+      "findingCount": 0,
+      "findings": [],
+      "summary": "All 7 network security checks passed. Scanned 1 files."
+    },
+    {
+      "slug": "incident-response",
+      "status": "failed",
+      "findingCount": 5,
+      "findings": [
+        {
+          "id": "inc-res-1-7729d852",
+          "severity": "high",
+          "title": "No incident response documentation found",
+          "description": "No incident response plan, SECURITY.md, or runbook directory was found. An incident response plan documenting escalation procedures, communication protocols, and recovery steps is required by SOC-2, HIPAA, and ISO-27001.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Create an INCIDENT_RESPONSE.md or .github/SECURITY.md documenting: 1) Incident classification criteria, 2) Escalation contacts and procedures, 3) Communication plan (internal and external), 4) Investigation steps, 5) Recovery procedures, 6) Post-incident review process.",
+          "framework": "SOC-2",
+          "controlId": "CC-7.3"
+        },
+        {
+          "id": "inc-res-2-7729d852",
+          "severity": "high",
+          "title": "No monitoring or observability tooling detected",
+          "description": "No monitoring libraries (Sentry, Datadog, Prometheus, OpenTelemetry, New Relic) were found in dependencies or code. Without monitoring, service degradations, errors, and security incidents cannot be detected in real-time.",
+          "location": "package.json -> dependencies",
+          "remediation": "Integrate a monitoring solution. For error tracking: `npm install @sentry/node` and `Sentry.init({dsn: \"...\"})`. For APM: use Datadog (`dd-trace`) or OpenTelemetry. For metrics: use Prometheus (`prom-client`). Ensure all services report health and error metrics.",
+          "framework": "HIPAA",
+          "controlId": "164.308(a)(6)"
+        },
+        {
+          "id": "inc-res-3-7729d852",
+          "severity": "medium",
+          "title": "No backup or disaster recovery configuration found",
+          "description": "No backup configuration, disaster recovery plan, or backup-related IaC resources were found. Without documented and tested backup procedures, data loss from accidental deletion, corruption, or ransomware may be unrecoverable.",
+          "location": "Infrastructure/documentation",
+          "remediation": "Document your backup and disaster recovery strategy including: 1) Recovery Time Objective (RTO), 2) Recovery Point Objective (RPO), 3) Automated backup schedules, 4) Restoration procedures, 5) Regular backup testing. For AWS, configure AWS Backup or RDS automated snapshots.",
+          "framework": "HIPAA",
+          "controlId": "164.308(a)(7)"
+        },
+        {
+          "id": "inc-res-4-7729d852",
+          "severity": "medium",
+          "title": "No disaster recovery or business continuity plan found",
+          "description": "No disaster recovery or business continuity documentation was found. A DR plan documents how to restore service in the event of a major outage, data center failure, or catastrophic event.",
+          "location": "/private/var/folders/5l/gr5ctbtj5c7220l6h_t679p40000gn/T/certus-scans/TheHoTTGame-1774247306442",
+          "remediation": "Create a DISASTER_RECOVERY.md documenting: 1) Critical systems and dependencies, 2) Recovery priorities, 3) Failover procedures, 4) Data restoration steps, 5) Communication plan, 6) Testing schedule. Conduct DR drills at least annually.",
+          "framework": "ISO-27001",
+          "controlId": "A.17.1.1"
+        },
+        {
+          "id": "inc-res-5-7729d852",
+          "severity": "high",
+          "title": "No alerting or notification configuration detected",
+          "description": "No alerting tools (PagerDuty, OpsGenie, Alertmanager) or notification configurations were found. Without alerting, incidents may go unnoticed for extended periods, increasing the blast radius and recovery time.",
+          "location": "Operations configuration",
+          "remediation": "Configure alerting for critical metrics. Integrate PagerDuty or OpsGenie for on-call notification. Define alert rules for: error rate spikes, latency degradation, availability drops, and security events. Ensure 24/7 on-call coverage.",
+          "framework": "NIST-800-53",
+          "controlId": "IR-6"
+        }
+      ],
+      "summary": "Found 5 incident response gaps across 7 checks."
+    }
+  ],
+  "evidence": {
+    "packId": "ep_e2d6a5491b94",
+    "signatureHash": "e2d6a5491b945a86e31f0a1520982dfa8a3efcec00099e1f969305c666577d6a",
+    "verified": true,
+    "signedFields": [
+      "controlMappings",
+      "headSha",
+      "iacResults",
+      "prNumber",
+      "repoFullName",
+      "sastFindings",
+      "sbomResults",
+      "secretsResults",
+      "testResults"
+    ]
+  },
+  "aiAnalysis": "included"
+}
