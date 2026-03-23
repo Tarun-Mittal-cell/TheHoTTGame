@@ -1,0 +1,18 @@
+{
+  "id": "rhina_b4_RSS",
+  "timestamp": "2026-03-23T06:37:35.039Z",
+  "repository": "Tarun-Mittal-cell/TheHoTTGame",
+  "headSha": "7729d852412c3b9159cc7ef9f03a887a55291d37",
+  "grade": "F",
+  "score": 49,
+  "totalFindings": 3,
+  "critical": 1,
+  "high": 1,
+  "medium": 1,
+  "low": 0,
+  "controlsPassed": 20,
+  "controlsTotal": 29,
+  "blueprintsPassed": 8,
+  "blueprintsTotal": 18,
+  "reportPath": "certus-report-TheHoTTGame-2026-03-23.json"
+}
