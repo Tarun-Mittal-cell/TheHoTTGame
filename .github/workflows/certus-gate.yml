@@ -1,0 +1,44 @@
+name: Certus Compliance Gate
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  certus-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Certus
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          npm install -g @tar_9897/certus-ai
+
+      - name: Run Certus Scan
+        run: |
+          certus scan . --no-clone --output certus-report.json
+          
+          SCORE=$(node -e "const r=require('./certus-report.json'); console.log(r.score ?? 0)")
+          CRITICAL=$(node -e "const r=require('./certus-report.json'); console.log(r.summary?.critical ?? 0)")
+          
+          echo "Certus Summary:"
+          echo "  Grade: $(node -e "const r=require('./certus-report.json'); console.log(r.grade)")"
+          echo "  Score: $SCORE"
+          echo "  Critical: $CRITICAL"
+          echo "  High: $(node -e "const r=require('./certus-report.json'); console.log(r.summary?.high ?? 0)")"
+          echo "  Controls: $(node -e "const r=require('./certus-report.json'); console.log(r.summary?.controlsPassed + '/' + r.summary?.controlsTotal)")"
+          
+          if [ "$CRITICAL" -gt 0 ]; then
+            echo "::error::Certus blocked merge: $CRITICAL critical finding(s)"
+            exit 1
+          fi
+          
+          if [ "$SCORE" -lt 50 ]; then
+            echo "::error::Certus blocked merge: compliance score $SCORE/100 (minimum 50)"
+            exit 1
+          fi
