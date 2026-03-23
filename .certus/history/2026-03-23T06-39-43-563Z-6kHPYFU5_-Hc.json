@@ -1,0 +1,18 @@
+{
+  "id": "6kHPYFU5_-Hc",
+  "timestamp": "2026-03-23T06:39:43.563Z",
+  "repository": "local/TheHoTTGame",
+  "headSha": "b527cf843fc04b150a516d089c6083d6027a799d",
+  "grade": "F",
+  "score": 1,
+  "totalFindings": 7,
+  "critical": 3,
+  "high": 1,
+  "medium": 3,
+  "low": 0,
+  "controlsPassed": 11,
+  "controlsTotal": 29,
+  "blueprintsPassed": 8,
+  "blueprintsTotal": 18,
+  "reportPath": "certus-report-TheHoTTGame-2026-03-23.json"
+}
