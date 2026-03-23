@@ -15,15 +15,14 @@ jobs:
           node-version: '20'
 
       - name: Install Certus
-        run: npm install -g @tar_9897/certus-ai
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          npm install -g @tar_9897/certus-ai
 
       - name: Run Certus Scan
         run: |
           certus scan . --no-clone --ai --output certus-report.json
           
-          # Extract grade score from report
           SCORE=$(node -e "const r=require('./certus-report.json'); console.log(r.grade?.score ?? r.score ?? 0)")
           CRITICAL=$(node -e "const r=require('./certus-report.json'); const f=r.findings||r.summary?.findings||[]; console.log(typeof f.critical==='number'?f.critical:f.filter?.(x=>x.severity==='critical')?.length??0)")
           
